@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stefano Catena - Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+        <div class="branding">
+            <h1>
+              <a href="index.html">
+                <span class="name">Stefano Catena</span><br>
+                <span class="tagline">sound&lt;-&gt;space</span>
+            </a>
+            </h1>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="music.html">Music & Code</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+  </header>
+  <div class="fixed-image"></div>
+
+
+  <main>
+    <section id="music">
+      <h2>Acousmatic Music</h2>
+    </section>
+    <section>
+      <iframe width="500" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322371567&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/stefanocatena" title="Stefano Catena" target="_blank" style="color: #cccccc; text-decoration: none;">Stefano Catena</a> · <a href="https://soundcloud.com/stefanocatena/tides-binaural" title="Tides - Binaural version" target="_blank" style="color: #cccccc; text-decoration: none;">Tides - Binaural version</a></div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Stefano Catena</p>
+  </footer>
+</body>
+</html>
