@@ -8,7 +8,7 @@
 /* Global styles */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #222;
+  background-color: var(--dark);
   color: #fff;
   line-height: 1.5;
   display: flex;
@@ -24,7 +24,7 @@ a {
 
 /* Header */
 header {
-  background-color: #111;
+  background-color: var(--light);
   padding: 10px 20px;
 }
 
@@ -125,7 +125,7 @@ p {
 }
 
 .name {
-  color: #ffffff; /* Green color for the name */
+  color: white; /* Green color for the name */
 }
 
 .tagline {

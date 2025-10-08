@@ -7,6 +7,124 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Colours */
+:root {
+  --dark: #0B2545;
+  --dmid: #13315C;
+  --lmid: #134074;
+  --light: #8DA9C4;
+  --white: #EEF4ED;
+}
+
+.prompt-thin {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.prompt-extralight {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.prompt-light {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.prompt-regular {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.prompt-medium {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.prompt-semibold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.prompt-bold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.prompt-extrabold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.prompt-black {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.prompt-thin-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.prompt-extralight-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.prompt-light-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.prompt-regular-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.prompt-medium-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.prompt-semibold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.prompt-bold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.prompt-extrabold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.prompt-black-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,11 +141,15 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	font-family: "Prompt", sans-serif;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+	background: none;
+}
 
 body {
 	line-height: 1;
@@ -83,7 +205,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252424;
+		background: var(--dmid);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -100,13 +222,13 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Verdana';
 		font-weight: 300;
-		color: #302e2e;
+		color: var(--white);
 		font-size: 14pt;
 		line-height: 1.75em;
 	}
 
 	strong, b {
-		color: #000000;
+		color: var(--white);
 		font-weight: 550;
 		font-stye: bold;
 	}
@@ -128,13 +250,13 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 0.75em #dddddd;
+		border-left: solid 0.75em --white;
 		padding: 1em 0 1em 1.5em;
 		font-style: italic;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		color: var(--white);
 		font-weight: 700;
 	}
 
@@ -152,12 +274,13 @@ input, select, textarea {
 	}
 
 	a {
-		color: #4d79f3;
+		color: var(--light);
 		text-decoration: none;
+		transition: 0.15s;
 	}
 
 		a:hover {
-			color: #7e9ae9;
+			filter: brightness(1.2);
 			text-decoration: none ;
 		}
 
@@ -167,7 +290,6 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #a9a9a9;
 		height: 1px;
 		margin: 2em 0 2em 0;
 	}
@@ -1522,7 +1644,6 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #dddddd;
 		}
 
 /* Section/Article */
@@ -1569,9 +1690,13 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #ebebeb;
-		border-bottom: solid 1px #ccc;
+		background: var(--dark);
 		padding: 2.75em 1.75em 2.75em 1.75em;
+		border-radius: 5px;
+	}
+
+		.box.post {
+		background: var(--dmid);
 	}
 
 		.box .image.featured {
@@ -1585,11 +1710,13 @@ input, select, textarea {
 		.box.post header {
 			padding-top: 1em;
 			margin: 0 0 2em 0;
+			background: none;
 		}
 
 		.box.post h2 {
 			font-size: 2.5em;
 			letter-spacing: -0.015em;
+			color: --;
 		}
 
 		.box.post header > p {
@@ -1928,66 +2055,77 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-facebook {
-					background: #3c5a98;
+				background: none;
+				transition: 0.15s;
 				}
 
-					ul.social li a.fa-facebook:hover {
-						background: #4c6aa8;
-					}
+				ul.social li a.fa-facebook:hover {
+				scale: 1.3;
+				}
 
 				ul.social li a.fa-twitter {
-					background: #2daae4;
+				background: none;
+				transition: 0.15s;
 				}
 
-					ul.social li a.fa-twitter:hover {
-						background: #3dbaf4;
-					}
+				ul.social li a.fa-twitter:hover {
+				scale: 1.3;
+				}
 
 				ul.social li a.fa-linkedin {
-					background: #006599;
+				background: none;
+				transition: 0.15s;
 				}
 
-					ul.social li a.fa-linkedin:hover {
-						background: #1075a9;
-					}
+				ul.social li a.fa-linkedin:hover {
+				scale: 1.3;
+				}
+
 				ul.social li a.fa-soundcloud {
-					background: #df6005;
+				background: none;
+				transition: 0.15s;
 				}
-	
-					ul.social li a.fa-soundcloud:hover {
-						background: #df7a32;
-					}
+
+				ul.social li a.fa-soundcloud:hover {
+				scale: 1.3;
+				}
+
 				ul.social li a.fa-github {
-					background: #000000;
+				background: none;
+				transition: 0.15s;
 				}
-	
-					ul.social li a.fa-github:hover {
-						background: #2b2b2b;
-					}
+
+				ul.social li a.fa-github:hover {
+				scale: 1.3;
+				}
+
 				ul.social li a.fa-black-tie {
-					background: #2f9c10;
+				background: none;
+				transition: 0.15s;
+				}
+
+				ul.social li a.fa-black-tie:hover {
+				scale: 1.3;
 				}
 	
-					ul.social li a.fa-black-tie:hover {
-						background: #49a92e;
-					}
-
 				ul.social li a.fa-envelope-open {
-						background: #0897aa;
+				background: none;
+				transition: 0.15s;
 					}
+
+				ul.social li a.fa-envelope-open:hover {
+				scale: 1.3;
+				}
 	
-						ul.social li a.fa-envelope-open:hover {
-							background: #47afbc;
-						}
-
-
 				ul.social li a.fa-user-graduate {
-						background: #f30e0e;
+				background: none;
+				transition: 0.15s;
 						}
-	
-					ul.social li a.fa-user-graduate:hover {
-						background: #e86767;
-						}
+
+				ul.social li a.fa-user-graduate:hover {
+				scale: 1.3;
+				}
+
 				
 
 /* Icons */
@@ -1996,7 +2134,9 @@ input, select, textarea {
 		text-decoration: none;
 		position: relative;
 		text-decoration: none;
+		margin-top: 0.5em;
 	}
+
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2081,17 +2221,16 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background: #252424;
-		border-bottom: solid 1px #ccc;
+		background: var(--dark);
 		padding: 5em 0 4em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: #508bd8;
-			font-weight: 300;
+			color: var(--white);
+			font-weight: 700;
 			font-size: 3.5em;
-			letter-spacing: -0.035em;
+			letter-spacing: 0.1em;
 			line-height: 1;
 			text-align: center;
 		}
@@ -2117,7 +2256,7 @@ input, select, textarea {
 
 				#nav > ul > li > a {
 					border-radius: 5px;
-					color: #5d5d5d;
+					color: var(--light);
 					text-decoration: none;
 					padding: 0.6em 1.2em 0.6em 1.2em;
 					-moz-transition: background-color .25s ease-in-out;
@@ -2128,12 +2267,17 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover > a, #nav > ul > li.active > a {
-					background: #f3f3f3;
+					background: var(--dmid);
+					color: var(--white);
+					-moz-transition: color .25s ease-in-out;
+					-webkit-transition: color .25s ease-in-out;
+					-ms-transition: color .25s ease-in-out;
+					transition: color .25s ease-in-out;
 				}
 
 				#nav > ul > li.current > a {
-					background: #4b89df;
-					color: #fff !important;
+					background: var(--lmid);
+					color: var(--white) !important;
 					font-weight: 700;
 				}
 
@@ -2281,7 +2425,7 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #fcfcfa;
+		background: var(--dmid);
 		padding: 4em 0 4em 0;
 	}
 
@@ -2297,15 +2441,16 @@ input, select, textarea {
 		}
 
 		#main .major h2 {
-			background: #f7f7f7 url("images/bg.png");
+			background: 7 url("images/bg.png");
 		}
 
 /* Footer */
 
 	#footer {
 		position: relative;
-		color: #858484;
-		padding: 4em 0;
+		color: var(--white);
+		padding: 0;
+		background-color: var(--dark);
 	}
 
 		#footer:before {
@@ -2356,8 +2501,6 @@ input, select, textarea {
 
 		#copyright ul.links {
 			display: inline-block;
-			background: #2C2929;
-			background: rgba(255, 255, 255, 0.05);
 			border-radius: 5px;
 			margin: 0;
 			padding: 0.85em 2.25em 0.85em 2.25em;
@@ -2615,12 +2758,9 @@ input, select, textarea {
 						font-size: 18px;
 						color: #fff;
 						text-align: center;
-						background: rgba(150, 150, 150, 0.75);
+						background: var(--lmid);
 						border-radius: 5px;
-					}
-
-					#titleBar .toggle:active:before {
-						background-color: #969696;
+						filter: brightness(1.1);
 					}
 
 			#navPanel {
@@ -2644,14 +2784,14 @@ input, select, textarea {
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				color: #858484;
+				color: var(--lmid);
 				background-image: url("images/bg02.png");
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 			}
 
 				#navPanel .link {
 					display: block;
-					color: #888;
+					color: --l;
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
@@ -2772,6 +2912,7 @@ input, select, textarea {
 
 		/* Box */
 
+
 			.box {
 				padding: 25px 15px 20px 15px;
 			}
@@ -2795,7 +2936,10 @@ input, select, textarea {
 				.box.post header > p {
 					margin-top: 0;
 					font-size: 1em;
+
 				}
+
+		
 
 		/* Divided */
 
